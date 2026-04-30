@@ -9,4 +9,28 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0183-customers-who-never-order](https://github.com/hsyoodev/leetcode/tree/master/0183-customers-who-never-order) |
 | [0184-department-highest-salary](https://github.com/hsyoodev/leetcode/tree/master/0184-department-highest-salary) |
 | [0185-department-top-three-salaries](https://github.com/hsyoodev/leetcode/tree/master/0185-department-top-three-salaries) |
+## Hash Table
+|  |
+| ------- |
+| [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
+## String
+|  |
+| ------- |
+| [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
+## Sliding Window
+|  |
+| ------- |
+| [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
+## Rolling Hash
+|  |
+| ------- |
+| [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
+## Hash Function
+|  |
+| ------- |
+| [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
 <!---LeetCode Topics End-->
