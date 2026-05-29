@@ -3,7 +3,7 @@ class Solution {
         val temp = mutableMapOf<Int, Int>()
 
         nums.forEachIndexed { index, i -> 
-            if(temp.containsKey(target - i)) {
+            if (temp.containsKey(target - i)) {
                 return intArrayOf(temp.getValue(target - i), index)
             }
 
