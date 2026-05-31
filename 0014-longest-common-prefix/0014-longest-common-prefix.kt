@@ -1,25 +1,19 @@
 class Solution {
     fun longestCommonPrefix(strs: Array<String>): String {
-        val set: MutableSet<String> = mutableSetOf()
-        var length = 1
-        var answer = ""
+        strs.sort()
 
-        while (true) {
-            set.clear()
+        val str1 = strs[0]
+        val str2 = strs[strs.count() - 1]
+        var index = 0;
 
-            for (str in strs) {
-                if (length > str.length) {
-                    return answer
-                }
-
-                set.add(str.substring(0, length))
-            }
-
-            length++
-
-            if (set.count() == 1) {
-                answer = set.joinToString("")
+        while(index < str1.length && index < str2.length) {
+            if(str1.get(index) == str2.get(index)) {
+                index++
+            } else {
+                break
             }
         }
+
+        return str1.substring(0, index)
     }
 }
