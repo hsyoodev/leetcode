@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/hsyoodev/leetcode/tree/master/0013-roman-to-integer) |
+| [0014-longest-common-prefix](https://github.com/hsyoodev/leetcode/tree/master/0014-longest-common-prefix) |
 | [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
 ## Bit Manipulation
 |  |
@@ -52,9 +53,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/hsyoodev/leetcode/tree/master/0001-two-sum) |
+| [0014-longest-common-prefix](https://github.com/hsyoodev/leetcode/tree/master/0014-longest-common-prefix) |
 ## Math
 |  |
 | ------- |
 | [0009-palindrome-number](https://github.com/hsyoodev/leetcode/tree/master/0009-palindrome-number) |
 | [0013-roman-to-integer](https://github.com/hsyoodev/leetcode/tree/master/0013-roman-to-integer) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/hsyoodev/leetcode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
