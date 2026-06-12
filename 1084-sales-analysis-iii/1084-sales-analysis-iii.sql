@@ -1,18 +1,13 @@
 # Write your MySQL query statement below
-SELECT 
-        DISTINCT 
-        Product.product_id
-      , Product.product_name
+SELECT
+        product_id
+      , product_name
 FROM
         Product
-INNER JOIN
-        Sales
-ON
-        Product.product_id = Sales.product_id
 WHERE
-        NOT EXISTS (
-                        SELECT 1
-                        FROM Sales
-                        WHERE product_id = Product.product_id
-                        AND (sale_date < '2019-01-01' OR sale_date > '2019-03-31')
-        )
+        product_id IN (
+                            SELECT product_id
+                            FROM Sales
+                            GROUP BY product_id
+                            HAVING MIN(sale_date) >= '2019-01-01' AND MAX(sale_date) <= '2019-03-31'
+                      );
