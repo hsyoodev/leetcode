@@ -9,47 +9,22 @@
  */
 class Solution {
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
-        val items: MutableList<Int> = mutableListOf()
+        if(list1 != null && list2 != null) {
+            if(list1.`val` < list2.`val`) {
+                list1.next = mergeTwoLists(list1.next, list2)
 
-        list1?.let {
-            var nextNode: ListNode? = list1.next
-            items.add(it.`val`)
+                return list1
+            } else {
+                list2.next = mergeTwoLists(list1, list2.next)
 
-            while(nextNode != null) {
-                items.add(nextNode.`val`)
-                nextNode = nextNode.next
-            }            
-        }
-
-        list2?.let {
-            var nextNode: ListNode? = list2.next
-            items.add(it.`val`)
-
-            while(nextNode != null) {
-                items.add(nextNode.`val`)
-                nextNode = nextNode.next
+                return list2
+            }
+        } else {
+            if(list1 == null) {
+                return list2
+            } else {
+                return list1
             }
         }
-
-        if(items.isNotEmpty()) {
-            items.sort()
-
-            val answer = ListNode(items[0])
-            var nextNode: ListNode? = null
-
-            items.forEachIndexed {index, item -> 
-                if(index == 1) {
-                    answer.next = ListNode(item)
-                    nextNode = answer.next
-                } else if(index >= 2) {
-                    nextNode?.next = ListNode(item)
-                    nextNode = nextNode?.next
-                }
-            }
-
-            return answer
-        }
-
-        return null
     }
 }
