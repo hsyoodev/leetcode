@@ -1,11 +1,14 @@
 class Solution {
     fun removeDuplicates(nums: IntArray): Int {
-        val distinctNums = nums.distinct()
+        var k = 1
 
-        distinctNums.forEachIndexed {index, num ->
-            nums[index] = num
+        for(i in 1 until nums.size) {
+            if(nums[i] != nums[i - 1]) {
+                nums[k] = nums[i]
+                k++
+            }
         }
 
-        return distinctNums.count()
+        return k
     }
 }
