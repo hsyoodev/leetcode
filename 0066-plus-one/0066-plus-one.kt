@@ -10,6 +10,9 @@ class Solution {
             digits[i] = 0
         }
 
-        return intArrayOf(1) + digits
+        val newDigits = IntArray(digits.size + 1)
+        newDigits[0] = 1
+
+        return newDigits
     }
 }
