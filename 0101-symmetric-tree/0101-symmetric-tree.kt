@@ -13,27 +13,17 @@ class Solution {
     val bfs2: MutableList<Int?> = mutableListOf()
 
     fun isSymmetric(root: TreeNode?): Boolean {
-        BFS1(root?.left)
-        BFS2(root?.right)
-
-        return bfs1 == bfs2
+        return isSame(root?.left, root?.right)
     }
 
-    fun BFS1(root: TreeNode?): Unit {
-        bfs1.add(root?.`val`)
-
-        if(root != null) {
-            BFS1(root.left)
-            BFS1(root.right)
+    fun isSame(left: TreeNode?, right: TreeNode?): Boolean {
+        if (left == null && right == null) {
+            return true
         }
-    }
-
-    fun BFS2(root: TreeNode?): Unit {
-        bfs2.add(root?.`val`)
-
-        if(root != null) {
-            BFS2(root.right)
-            BFS2(root.left)
+        if (left == null || right == null) {
+            return false
         }
+        return left.`val` == right.`val` && isSame(left.left, right.right) && isSame(right.left, left.right)
     }
  }
+ 
