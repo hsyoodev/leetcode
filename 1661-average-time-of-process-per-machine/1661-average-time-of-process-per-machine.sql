@@ -1,16 +1,18 @@
 # Write your MySQL query statement below
-SELECT 
-        Custom_Activity.machine_id
-      , ROUND(AVG(Custom_Activity.processing_time), 3) AS processing_time
+SELECT
+        A.machine_id
+      , ROUND(SUM(B.timestamp - A.timestamp) / COUNT(*), 3) AS processing_time
 FROM
-        (
-            SELECT
-                    machine_id
-                  , MAX(timestamp) - MIN(timestamp) AS processing_time
-            FROM
-                    Activity
-            GROUP BY
-                    machine_id, process_id
-        ) Custom_Activity
+        Activity A
+INNER JOIN
+        Activity B
+ON
+        A.machine_id = B.machine_id
+AND
+        A.process_id = B.process_id
+WHERE
+        A.activity_type = 'start'
+AND
+        B.activity_type = 'end'
 GROUP BY
-        Custom_Activity.machine_id;
+        A.machine_id;
