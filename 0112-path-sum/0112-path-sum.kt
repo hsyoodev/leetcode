@@ -10,20 +10,15 @@
  */
 class Solution {
     fun hasPathSum(root: TreeNode?, targetSum: Int): Boolean {
-        if(root != null) {
-            if(root.left == null && root.right == null) {
-                if((targetSum - root.`val`) == 0) {
-                    return true
-                } else {
-                    return false
-                }
-            } 
-        }
-
         if(root == null) {
             return false
         }
 
-        return hasPathSum(root.left, targetSum - root.`val`) || hasPathSum(root.right,targetSum - root.`val`)
+        val sum = targetSum - root.`val`
+        if(root.left == null && root.right == null && sum == 0) {
+            return true
+        }
+
+        return hasPathSum(root.left, sum) || hasPathSum(root.right, sum)
     }
 }
