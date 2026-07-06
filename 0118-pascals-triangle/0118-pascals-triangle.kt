@@ -1,20 +1,23 @@
 class Solution {
     fun generate(numRows: Int): List<List<Int>> {
-        return (
-            buildList {
-                repeat(numRows) { index1 ->
-                    val currentRow = List(index1 + 1) { index2 ->
-                        if (index2 == 0 || index2 == index1) {
-                            1
-                        } else {
-                            val prevRow = last()
-                            prevRow[index2 - 1] + prevRow[index2]
-                        }
-                    }
+        val pascalTriangle: MutableList<MutableList<Int>> = mutableListOf()
 
-                    add(currentRow)
+        for(i in 0 until numRows) {
+            val currentRow: MutableList<Int> = mutableListOf()
+
+            for(j in 0 until (i + 1)) {
+                if(j == 0 || j == i) {
+                    currentRow.add(1)
+                } else {
+                    val prevRow = pascalTriangle.get(i - 1)
+
+                    currentRow.add(prevRow.get(j - 1) + prevRow.get(j))
                 }
             }
-        )
+
+            pascalTriangle.add(currentRow)
+        }
+
+        return pascalTriangle
     }
 }
