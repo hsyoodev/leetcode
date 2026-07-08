@@ -3,16 +3,16 @@ class Solution {
         var left = 0
         var right = s.length - 1
 
-        while(left <= right) {
-            if(!s[left].isLetterOrDigit()) {
+        while(left < right) {
+            while(left < right && !s[left].isLetterOrDigit()) {
                 left++
+            }
 
-                continue
-            } else if(!s[right].isLetterOrDigit()) {
+            while(left < right && !s[right].isLetterOrDigit()) {
                 right--
+            }
 
-                continue
-            } else if(!s[left].equals(s[right], true)) {
+            if(s[left].lowercaseChar() != s[right].lowercaseChar()) {
                 return false
             } 
 
