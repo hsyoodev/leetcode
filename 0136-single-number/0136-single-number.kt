@@ -1,11 +1,11 @@
 class Solution {
     fun singleNumber(nums: IntArray): Int {
-        val map = mutableMapOf<Int, Int>()
+        var answer = 0
 
         nums.forEach { num -> 
-            map[num] = map.getOrDefault(num, 0) + 1
+            answer = answer xor num
         }
 
-        return map.entries.first { it.value == 1 }.key
+        return answer
     }
 }
