@@ -12,19 +12,19 @@ class Solution {
     val nodes = mutableListOf<Int>()
 
     fun preorderTraversal(root: TreeNode?): List<Int> {
-        BFS(root)
+        DFS(root)
 
         return nodes
     }
 
-    fun BFS(root: TreeNode?): Unit {
+    fun DFS(root: TreeNode?): Unit {
         if(root == null) {
             return
         }
 
         nodes.add(root.`val`)
 
-        BFS(root.left)
-        BFS(root.right)
+        DFS(root.left)
+        DFS(root.right)
     }
 }
