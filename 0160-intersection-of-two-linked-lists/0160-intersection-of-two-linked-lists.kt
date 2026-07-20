@@ -9,32 +9,24 @@
  */
 
 class Solution {
-    val set = mutableSetOf<ListNode>()
-
     fun getIntersectionNode(headA:ListNode?, headB:ListNode?):ListNode? {
         var nodeA = headA
-        while(true) {
-            if(nodeA == null) {
-                break
-            }
-
-            set.add(nodeA)
-            nodeA = nodeA.next
-        }
-
         var nodeB = headB
-        while(true) {
-            if(nodeB == null) {
-                break
+
+        while(nodeA != nodeB) {
+            if(nodeA == null) {
+                nodeA = headB
+            } else {
+                nodeA = nodeA.next
             }
 
-            if(set.contains(nodeB)) {
-                return nodeB
+            if(nodeB == null) {
+                nodeB = headA
+            } else {
+                nodeB = nodeB.next
             }
-            
-            nodeB = nodeB.next
         }
 
-        return null
+        return nodeA
     }
 }
