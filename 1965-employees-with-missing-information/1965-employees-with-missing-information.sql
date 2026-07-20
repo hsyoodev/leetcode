@@ -26,4 +26,3 @@ UNION ALL
 )
 ORDER BY
         employee_id;
-
