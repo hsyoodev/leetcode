@@ -74,6 +74,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0067-add-binary](https://github.com/hsyoodev/leetcode/tree/master/0067-add-binary) |
 | [0125-valid-palindrome](https://github.com/hsyoodev/leetcode/tree/master/0125-valid-palindrome) |
 | [0168-excel-sheet-column-title](https://github.com/hsyoodev/leetcode/tree/master/0168-excel-sheet-column-title) |
+| [0171-excel-sheet-column-number](https://github.com/hsyoodev/leetcode/tree/master/0171-excel-sheet-column-number) |
 | [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
 ## Bit Manipulation
 |  |
@@ -119,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0069-sqrtx](https://github.com/hsyoodev/leetcode/tree/master/0069-sqrtx) |
 | [0070-climbing-stairs](https://github.com/hsyoodev/leetcode/tree/master/0070-climbing-stairs) |
 | [0168-excel-sheet-column-title](https://github.com/hsyoodev/leetcode/tree/master/0168-excel-sheet-column-title) |
+| [0171-excel-sheet-column-number](https://github.com/hsyoodev/leetcode/tree/master/0171-excel-sheet-column-number) |
 ## Trie
 |  |
 | ------- |
