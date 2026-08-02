@@ -67,6 +67,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/hsyoodev/leetcode/tree/master/0169-majority-element) |
 | [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
 | [0202-happy-number](https://github.com/hsyoodev/leetcode/tree/master/0202-happy-number) |
+| [0205-isomorphic-strings](https://github.com/hsyoodev/leetcode/tree/master/0205-isomorphic-strings) |
 ## String
 |  |
 | ------- |
@@ -80,6 +81,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0168-excel-sheet-column-title](https://github.com/hsyoodev/leetcode/tree/master/0168-excel-sheet-column-title) |
 | [0171-excel-sheet-column-number](https://github.com/hsyoodev/leetcode/tree/master/0171-excel-sheet-column-number) |
 | [0187-repeated-dna-sequences](https://github.com/hsyoodev/leetcode/tree/master/0187-repeated-dna-sequences) |
+| [0205-isomorphic-strings](https://github.com/hsyoodev/leetcode/tree/master/0205-isomorphic-strings) |
 ## Bit Manipulation
 |  |
 | ------- |
