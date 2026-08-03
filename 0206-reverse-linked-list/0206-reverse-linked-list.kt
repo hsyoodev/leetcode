@@ -9,20 +9,16 @@
  */
 class Solution {
     fun reverseList(head: ListNode?): ListNode? {
-        val list = mutableListOf<Int>()
-        var node = head
-        while(node != null) {
-            list.add(node.`val`)
-            node = node.next
+        var prev: ListNode? = null
+        var curr = head
+        
+        while(curr != null) {
+            val temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
         }
 
-        val reverseList = ListNode(0)
-        var node2 = reverseList
-        for(i in (list.size - 1) downTo 0) {
-            node2.next = ListNode(list[i])
-            node2 = node2.next
-        }
-
-        return reverseList.next
+        return prev
     }
 }
