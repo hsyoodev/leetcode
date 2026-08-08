@@ -126,6 +126,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0136-single-number](https://github.com/hsyoodev/leetcode/tree/master/0136-single-number) |
 | [0169-majority-element](https://github.com/hsyoodev/leetcode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/hsyoodev/leetcode/tree/master/0217-contains-duplicate) |
+| [0228-summary-ranges](https://github.com/hsyoodev/leetcode/tree/master/0228-summary-ranges) |
 ## Math
 |  |
 | ------- |
