@@ -8,9 +8,7 @@ class MyQueue() {
 
     fun pop(): Int {
         if(stack2.isEmpty()) {
-            while(!stack1.isEmpty()) {
-                stack2.push(stack1.pop())
-            }
+            reverseInto()
         }
 
         return stack2.pop()
@@ -18,12 +16,10 @@ class MyQueue() {
 
     fun peek(): Int {
         if(stack2.isEmpty()) {
-            while(!stack1.isEmpty()) {
-                stack2.push(stack1.pop())
-            }
+            reverseInto()
         }
-        
-        if(!stack2.isEmpty()) {
+
+        if(stack2.isNotEmpty()) {
             return stack2.peek()
         } 
 
@@ -32,6 +28,12 @@ class MyQueue() {
 
     fun empty(): Boolean {
         return stack1.isEmpty() && stack2.isEmpty()
+    }
+
+    fun reverseInto() {
+        while(stack1.isNotEmpty()) {
+            stack2.push(stack1.pop())
+        }
     }
 }
 
