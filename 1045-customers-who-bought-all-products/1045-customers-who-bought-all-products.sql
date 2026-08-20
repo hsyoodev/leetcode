@@ -1,16 +1,12 @@
 # Write your MySQL query statement below
 SELECT
-        C.customer_id
+        customer_id
 FROM
-        Customer C
-INNER JOIN
-        Product P
-WHERE
-        C.product_key = P.product_key
+        Customer
 GROUP BY
-        C.customer_id
+        customer_id
 HAVING
-        COUNT(DISTINCT C.product_key) = (
-                                            SELECT COUNT(*)
-                                            FROM Product
-                                        );
+        COUNT(DISTINCT product_key) = (
+                                        SELECT COUNT(*)
+                                        FROM Product
+                                      );
