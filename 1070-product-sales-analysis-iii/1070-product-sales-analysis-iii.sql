@@ -5,15 +5,10 @@ SELECT
       , quantity
       , price
 FROM
-        (
-            SELECT
-                    product_id
-                  , year
-                  , quantity
-                  , price
-                  , RANK() OVER(PARTITION BY product_id ORDER BY year) AS no
-            FROM
-                    Sales
-        ) A
+        Sales
 WHERE
-        no = 1;
+        (product_id, year) IN (
+                                    SELECT product_id, MIN(year)
+                                    FROM Sales
+                                    GROUP BY product_id
+                              );
