@@ -211,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0035-search-insert-position](https://github.com/hsyoodev/leetcode/tree/master/0035-search-insert-position) |
 | [0069-sqrtx](https://github.com/hsyoodev/leetcode/tree/master/0069-sqrtx) |
 | [0268-missing-number](https://github.com/hsyoodev/leetcode/tree/master/0268-missing-number) |
+| [0278-first-bad-version](https://github.com/hsyoodev/leetcode/tree/master/0278-first-bad-version) |
 ## Simulation
 |  |
 | ------- |
@@ -318,4 +319,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0258-add-digits](https://github.com/hsyoodev/leetcode/tree/master/0258-add-digits) |
+## Interactive
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/hsyoodev/leetcode/tree/master/0278-first-bad-version) |
 <!---LeetCode Topics End-->
