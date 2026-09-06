@@ -1,15 +1,20 @@
 class NumArray(nums: IntArray) {
-    val nums = nums
+    val prefix = IntArray(nums.size)
     var sum = 0
 
-    fun sumRange(left: Int, right: Int): Int {
-        sum = 0
-
-        for(i in left until (right + 1)) {
+    init {
+        for(i in nums.indices) {
             sum += nums[i]
+            prefix[i] = sum
         }
+    }
 
-        return sum
+    fun sumRange(left: Int, right: Int): Int {
+        return if(left == 0) {
+            prefix[right]
+        } else {
+            prefix[right] - prefix[left - 1]
+        }
     }
 }
 
