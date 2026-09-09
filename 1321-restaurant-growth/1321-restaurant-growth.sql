@@ -1,26 +1,27 @@
 # Write your MySQL query statement below
+WITH
+    CTE1 AS (
+        SELECT
+                visited_on
+              , SUM(amount) AS amount
+        FROM
+                Customer
+        GROUP BY
+                visited_on
+    )
+  , CTE2 AS (
+        SELECT
+                visited_on
+              , SUM(amount) OVER(ORDER BY visited_on rows between 6 preceding and current row) AS amount
+              , RANK() OVER(ORDER BY visited_on) AS RN
+        FROM
+                CTE1
+    )
 SELECT
         visited_on
-      , (
-            SELECT SUM(amount)
-            FROM Customer
-            WHERE visited_on BETWEEN DATE_SUB(C.visited_on, INTERVAL 6 DAY) AND C.visited_on
-        ) AS amount
-      , ROUND
-        (
-                (
-                    SELECT SUM(amount) / 7
-                    FROM Customer
-                    WHERE visited_on BETWEEN DATE_SUB(C.visited_on, INTERVAL 6 DAY) AND C.visited_on
-                )
-              , 2
-        ) AS average_amount
-FROM 
-        Customer C
-WHERE 
-        visited_on >= (
-                        SELECT DATE_ADD(MIN(visited_on), INTERVAL 6 DAY)
-                        FROM Customer
-                      )
-GROUP BY 
-        visited_on;
+      , amount
+      , ROUND(amount / 7, 2) AS average_amount
+FROM
+        CTE2
+WHERE
+        rn >= 7;
